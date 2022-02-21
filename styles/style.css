@@ -1,0 +1,201 @@
+/* configurar ambiente */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --yellow: #ffcc29;
+  --blue: #1d549e;
+  --gray: #828799;
+  --page-background: #f9fbfc;
+
+}
+
+
+
+body{
+  background-color: var(--page-background);
+  
+}
+
+/* HEADER */
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: var(--blue);
+  line-height: 1.5;
+}
+
+.slogan{
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(2.5rem, 3rem, 3.2rem);
+  color: #fff;
+}
+
+.description{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: clamp(1rem, 1.12rem, 1.3rem);
+  color: #fff;
+  max-width: 40%;
+  text-align: center;
+}
+
+
+/* MAIN */
+
+#plans{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.free-plan,
+.basic-plan,
+.pro-plan{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.8rem ;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 355px;
+  height: 420px;
+  padding: 1rem 2rem ;
+
+}
+
+
+
+.basic-plan{
+  height: 490px;
+}
+
+.basic-plan .basic-type{
+  background: var(--yellow);
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  height: 20px;
+  border-radius: 10px 10px 0 0 ;
+
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(1rem, 1.12rem, 1.3rem);
+  color: var(--blue);
+
+
+}
+
+.basic-plan .basic-type span{
+  background-color: var(--blue);
+  border-radius: 20px;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.free-plan .plan-type,
+.pro-plan .plan-type{
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(1rem, 1.12rem, 1.3rem);
+  color: #000;
+}
+.basic-plan .price{
+  margin-top: 70px;
+}
+ .price{
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+}
+.price span{
+  font-size: 1.12rem;
+
+}
+
+.monthly{
+  font-weight: 200;
+  color: var(--gray);
+}
+.plan-description{
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.benefits{
+  border-top: 1px solid #EEEEEE;
+  width: 100%;
+}
+.benefits-list{
+  list-style-type: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.benefits-list li{
+  color: var(--gray);
+  background-image: url("../assets/check.svg");
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.buy-plan{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  width: 90%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  background: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.12rem;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.buy-plan:hover{
+  border: none;
+  background: var(--blue);
+  color: #fff;
+}
+
+.basic-plan .buy-plan{
+  bottom: calc(70px - 15px);
+  border: none;
+  background: var(--blue);
+  color: #fff;
+}
+
+.basic-plan .buy-plan:hover{
+  background: #0d3c7a;
+}
